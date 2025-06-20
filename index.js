@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const app = express();
 app.use(express.json());
+require('dotenv').config()
 
 const PORT = process.env.PORT || 3000;
 
@@ -199,7 +200,7 @@ app.post('/offer/:id/response', (req, res) => {
     return res.status(400).json({ message: 'Invalid status' });
   }
 
-  offer.status = status;
+  offer.status = status;cty4
   res.json({ message: `Offer ${status}`, offer });
 });
                             
