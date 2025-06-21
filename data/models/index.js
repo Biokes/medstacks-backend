@@ -1,5 +1,5 @@
 import {database} from "../../config/index.js";
-import {DataTypes, STRING} from "sequelize";
+import {DataTypes} from "sequelize";
 
 export const FarmersRepository = database.define("Farmer", {
     id: {

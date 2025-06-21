@@ -1,9 +1,7 @@
 const express = require('express');
 const {authRouter} = require("./controllers/auths.controller.js");
-// const bcrypt = require('bcryptjs');
 const app = express();
 require('dotenv').config()
-
 const PORT = process.env.PORT;
 
 // let users = [];
@@ -259,6 +257,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use('/api/v1/auth',authRouter)
+
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
