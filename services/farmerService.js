@@ -1,5 +1,6 @@
-import {validate} from "../utils/index.js";
+import {validateFarmer} from "../utils/index.js";
 
 export function register(farmer){
-    validate(farmer);
+   validateFarmer(farmer);
+   farmersDB.save(farmer);
 }
