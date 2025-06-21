@@ -6,6 +6,7 @@ function assertValid(isValid,exceptionMessage= INVALID_CREDENTIALS){
         throw new AgrolinkException(exceptionMessage)
     }
 }
+
 export function validateFullName(name){
     name= name.trim();
     const isValidFullName = /^[a-zA-Z]+(\s[a-zA-Z]+)+$/.test(name);
@@ -21,7 +22,7 @@ export function validatePhoneNumber(number){
     assertValid(isValidNumber)
 }
 export function validateFarmer(farmer){
-    validateFullName(farmer.name);
+    validateFullName(farmer.fullName);
     validateEmail(farmer.email);
     validatePhoneNumber(farmer.phoneNumber)
 }
